@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta chartset = 'utf-8' />
+		<title>underscoreTemplate</title>
+		<script src="template.js"></script>
+	</head>
+	<body>
+		<script type="text/template" id="tpl">
+		  <% _.each(datas, function (item) { %>
+  			<div class="outer">
+  		 	 <%= item.title %> - <%= item.url %> - <%= item.film %>
+ 			 </div>
+		 <% }); %>
+		<% if(datas.length>3) {%>
+			<p> datas's length is more than 3 </p>
+		<%}%>
+		</script>
+		<script type="text/javascript">
+		var datas = [
+		  {
+		    title: 'title1',
+		    url: 'http://www.baidu.com',
+		    film: 'moviceName1'
+		  },
+		  {
+		    title: 'title2',
+		    url: 'http://www.baidu.com',
+		    film: 'moviceName2'
+		  },
+		  {
+		    title: 'title3',
+		    url: 'http://www.baidu.com',
+		    film: 'moviceName3'
+		  },
+		  {
+		    title: 'title4',
+		    url: 'http://www.baidu.com',
+		    film: 'moviceName4'
+		  },
+		  {
+		    title: 'title5',
+		    url: 'http://www.baidu.com',
+		    film: 'moviceName5'
+		  }
+		];
+		html = document.querySelector('#tpl').innerHTML;
+		document.body.innerHTML +=  _.template(html)(datas) ;
+		</script>
+	</body>
+</html>
