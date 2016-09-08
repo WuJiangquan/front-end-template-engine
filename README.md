@@ -1,5 +1,5 @@
   Usually,I just use the underscore as a template engine.Which means most of code of underscore is superfluous to me.
-To make the web page as light as possible,I extract the code of template engine of underscore;
+To make the web page as light as possible,I extract the code of template engine from underscore.js;
    <br><br><strong>Using it follow these steps</strong>
    1. Include the js file \<script src="template.js">\</script>
    2. Write the template like a string in the js  like :<br>
